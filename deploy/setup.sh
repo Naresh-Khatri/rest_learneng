@@ -36,7 +36,7 @@ $PROJECT_BASE_PATH/env/bin/python manage.py collectstatic --noinput
 cp $PROJECT_BASE_PATH/deploy/supervisor_learneng_api.conf /etc/supervisor/conf.d/learneng_api.conf
 supervisorctl reread
 supervisorctl update
-supervisorctl restart rest_plasmatch
+supervisorctl restart rest_learneng
 
 # Configure nginx
 cp $PROJECT_BASE_PATH/deploy/nginx_learneng_api.conf /etc/nginx/sites-available/learneng_api.conf
