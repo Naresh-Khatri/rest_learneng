@@ -33,15 +33,15 @@ $PROJECT_BASE_PATH/env/bin/python manage.py migrate
 $PROJECT_BASE_PATH/env/bin/python manage.py collectstatic --noinput
 
 # Configure supervisor
-cp $PROJECT_BASE_PATH/deploy/supervisor_profiles_api.conf /etc/supervisor/conf.d/profiles_api.conf
+cp $PROJECT_BASE_PATH/deploy/supervisor_learneng_api.conf /etc/supervisor/conf.d/learneng_api.conf
 supervisorctl reread
 supervisorctl update
 supervisorctl restart rest_plasmatch
 
 # Configure nginx
-cp $PROJECT_BASE_PATH/deploy/nginx_profiles_api.conf /etc/nginx/sites-available/profiles_api.conf
+cp $PROJECT_BASE_PATH/deploy/nginx_learneng_api.conf /etc/nginx/sites-available/learneng_api.conf
 rm /etc/nginx/sites-enabled/default
-ln -s /etc/nginx/sites-available/profiles_api.conf /etc/nginx/sites-enabled/profiles_api.conf
+ln -s /etc/nginx/sites-available/learneng_api.conf /etc/nginx/sites-enabled/learneng_api.conf
 systemctl restart nginx.service
 
 echo "DONE! :)"
