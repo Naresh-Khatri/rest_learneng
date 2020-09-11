@@ -3,7 +3,7 @@
 set -e
 
 # TODO: Set to URL of git repo.
-PROJECT_GIT_URL='https://github.com/Naresh-Khatri/learneng.git'
+PROJECT_GIT_URL='https://github.com/Naresh-Khatri/rest_learneng.git'
 
 PROJECT_BASE_PATH='/usr/local/apps/rest_learneng'
 
