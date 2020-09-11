@@ -41,7 +41,7 @@ supervisorctl restart rest_learneng
 # Configure nginx
 cp $PROJECT_BASE_PATH/deploy/nginx_learneng_api.conf /etc/nginx/sites-available/learneng_api.conf
 rm /etc/nginx/sites-enabled/default
-ln -s /etc/nginx/sites-available/learneng_api.conf /etc/nginx/sites-enabled/learneng_api.conf
+# ln -s /etc/nginx/sites-available/learneng_api.conf /etc/nginx/sites-enabled/learneng_api.conf
 systemctl restart nginx.service
 
 echo "DONE! :)"
